@@ -1,0 +1,55 @@
+body {
+    background-image: url("wpbtc.jpg");
+    background-size: cover;
+}
+
+div {
+    border: solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgb(248, 229, 167);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.imgBig {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.imgSmall {
+    width: 27px;
+}
+
+.aLink {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.aButton {
+    text-decoration: none;
+}
+
+p {
+    margin: 20px 10px;
+    text-indent: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 20px;
+    text-align: justify;
+}
+
+button {
+    background-color: rgb(251, 220, 117);
+    border-radius: 5px;
+    border-color: gray;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: large;
+    color: rgb(114, 100, 6);
+    height: 30px;
+    width: 200px;
+}

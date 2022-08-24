@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+.divHead {
+    margin: 0 auto 10px;
+    background-image: linear-gradient(rgb(70, 248, 70), rgb(113, 222, 249));
+    width: 60%;
+}
+
+.divHead img {
+    width: 40%;
+}
+
+.divHead h1 {
+    font-family: "Lucida Handwriting";
+    color: rgb(28, 208, 253);
+}
+
+.divHead h5 {
+    margin: 0;
+    padding: 2px;
+}
+
+.divButtons {
+    display: inline-block;
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin: 10px 30px;
+    width: 15%;
+}
+
+.divButtons img {
+    border-bottom: solid 1px grey;
+    border-radius: 10px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    width: 80%;
+    background-color: rgb(143, 250, 143);
+    height: 30px;
+    border: solid 2px rgb(46, 250, 46);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

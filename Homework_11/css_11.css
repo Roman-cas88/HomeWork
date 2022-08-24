@@ -1,0 +1,17 @@
+body {
+    background-color: lightblue;
+  }
+  p {
+    height: 30%;
+    text-indent: 20px;
+}
+.img1 {
+    height: 30%;
+    width: 30%; 
+    float: left;
+}
+.img2 {
+    height: 30%;
+    width: 30%;
+    float: right;
+}

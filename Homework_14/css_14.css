@@ -1,0 +1,48 @@
+div {
+    margin: auto;
+    text-align: center;
+
+}
+a {
+    margin: auto;
+    display: inline-block;
+}
+button {
+    padding: 20px 15px;
+    margin: 10px;
+    color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    width: 110px;
+}
+
+.buttonGreen {
+    background-color: white;
+    color: green;
+    border: solid green;
+}
+
+.buttonGreen:hover {
+    background-color: green;
+    color: white;
+}
+.buttonBlue {
+    background-color: white;
+    color: blue;
+    border: solid blue;
+}
+
+.buttonBlue:hover {
+    background-color: blue;
+    color: white;
+}
+.buttonOrange {
+    background-color: white;
+    color: orange;
+    border: solid orange;
+}
+
+.buttonOrange:hover {
+    background-color: orange;
+    color: white;
+}

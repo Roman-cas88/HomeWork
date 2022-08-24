@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    margin: auto;
+
+}
+.fon {
+    height: 50%;
+    background-color: #cccccc;
+    background-image: linear-gradient(greenyellow, blue);
+    width: 60%;
+    margin: 0 auto;
+}
+.fon p {
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+}
+.fon img {
+    width:80%;
+}
+
+h1 {
+    font-family: "Lucida Handwriting";
+    color: white;
+    font-size: 30px;
+}
