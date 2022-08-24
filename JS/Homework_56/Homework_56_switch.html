@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_56</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+</body>
+<script>
+    let str = 10;
+    switch (true) {
+        case (str.length < 5):
+            document.getElementById('p1').innerHTML = "A Tiny String";
+            break;
+
+
+        case (str.length >= 5) && (str.length < 15):
+            document.getElementById('p1').innerHTML = "A Short String";
+            break;
+
+        case (str.length >= 15) && (str.length < 30):
+            document.getElementById('p1').innerHTML = "An Average String";
+            break;
+
+        case (str.length >= 30) && (str.length < 50):
+            document.getElementById('p1').innerHTML = "A Large String";
+            break;
+
+        case (str.length > 50):
+            document.getElementById('p1').innerHTML = "A Gigantic String";
+            break;
+
+        default:
+            document.getElementById('p1').innerHTML = "This is not a string";
+    };
+</script>
+
+</html>

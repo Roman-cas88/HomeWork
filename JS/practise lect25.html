@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_64</title>
+    <!-- <link rel="stylesheet" href=".css"> -->
+
+</head>
+
+<body>
+     <!-- Calculator: -->
+    <p>1st number: </p> <input id="inFirst" ; value="" ; type="number">
+    <p>2nd number: </p> <input id="inSecond" ; value="" ; type="number">
+    <div>
+        <button onclick="funcAddition()">Addition "+"</button>
+        <button onclick="funcSubtraction()">Subtraction "-"</button>
+        <button onclick="funcMultiply()">Multiply "*"</button>
+        <button onclick="funcDivide()">Divide "/"</button>
+    </div>
+
+    <p>The result is: <span id="spanResult"></span></p>
+
+
+</body>
+
+<script>
+    // Fourth Task Calculator:
+
+    // Addition
+    function funcAddition() {
+        let inFirst = parseInt(document.getElementById('inFirst').value)
+        let inSecond = parseInt(document.getElementById('inSecond').value)
+        document.getElementById("spanResult").innerHTML = inFirst + inSecond;
+    }
+    // Subtration
+    function funcSubtraction() {
+        let inFirst = parseInt(document.getElementById('inFirst').value)
+        let inSecond = parseInt(document.getElementById('inSecond').value)
+        document.getElementById("spanResult").innerHTML = inFirst - inSecond;
+    }
+    // Multiply
+    function funcMultiply() {
+        let inFirst = parseInt(document.getElementById('inFirst').value)
+        let inSecond = parseInt(document.getElementById('inSecond').value)
+        document.getElementById("spanResult").innerHTML = inFirst * inSecond;
+    }
+    // Divide
+    function funcDivide() {
+        let inFirst = parseInt(document.getElementById('inFirst').value)
+        let inSecond = parseInt(document.getElementById('inSecond').value)
+        document.getElementById("spanResult").innerHTML = inFirst / inSecond;
+    }
+
+    // First Task:
+
+    // const car = {
+    //     type: "Fiat",
+    //     model: "500",
+    //     color: "white",
+    //     doors: 5
+    // };
+    // let val = Object.values(car)
+    // let key = Object.keys(car)
+    // let ent = Object.entries(car)
+
+    // console.log("Short info: " + val)
+    // console.log("Info info: " + key)
+    // console.log("Full info: " + ent)
+    // console.log("the car " + key[0] + " is " + val[0] + ", name of " + key[1] + " is " + '"' + val[1] + '"' +
+    //     " and a " + key[2] + " is " + val[2] + " and numbers of " + key[3] + " " + val[3])
+
+    // Second Task:
+
+    // const num = [1, 2, 3, 4, 5, 6]
+
+    // function numRevers() {
+    //     if (true) {
+    //         console.log(num.reverse())
+    //     } else {
+    //         console.log(num)
+    //     }
+    // }
+    // numRevers(num);
+    // numRevers(num, false)
+</script>
+
+
+</html>

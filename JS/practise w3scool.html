@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <!-- <link rel="stylesheet" href=".css"> -->
+
+</head>
+
+<body>
+    <!-- 1. Get date -->
+    <!-- <p>Today is: <span id="spanDay"></span></p>
+    <p>Current time is: <span id="spanTime"></span></p>
+    <button onclick="funcInfo()">Click to show day and time</button> -->
+
+
+    <!-- 2. Print page -->
+    <!-- <p>If you want to print this page click on button</p>
+<button onclick="funcPrint()">Print</button> -->
+
+    <!-- 3. Date dd-mm-yyyy -->
+    <!-- <p>Today is: <span id="spanDate"></span></p>
+    <button onclick="funcDate()">View date</button> -->
+
+    <!-- 4. Find area  -->
+    <p>Input lengths of the triangle:</p>
+    <p>1st side: <input id="inFirst"></p>
+    <p>2nd side: <input id="inSecond"></p>
+    <p>3rd side: <input id="inThird"></p>
+    <button onclick="funcArea()">Find the area</button>
+    <p>The area of the triangle is: <span id="spanArea"></span></p>
+
+</body>
+
+
+
+<script>
+    // 1. View a day and the time:
+    // function funcInfo() {
+    //     let d = new Date()
+    //     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    //     let day = days[d.getDay(d)]
+    //     let h = d.getHours()
+    //     let m = d.getMinutes()
+    //     let s = d.getSeconds()
+    //     let p
+    //     if (h >= 12) {
+    //         p = "PM"
+    //     } else {
+    //         p = "AM"
+    //     }
+    //     let time = h + p + " : " + m + " : " + s;
+    //     document.getElementById("spanDay").innerHTML = day;
+    //     document.getElementById("spanTime").innerHTML = time;
+    // }
+
+    // 2. Print page
+    // function funcPrint() {
+    //     window.print()
+    // }
+
+    // 3. Date dd-mm-yyyy
+    // function funcDate() {
+    //     let d = new Date()
+    //     let dd = d.getDate()
+    //     let mm = d.getMonth()
+    //     let yyyy = d.getFullYear()
+    //     if (dd < 10) {
+    //         dd = "0" + dd;
+    //     }
+    //     if (mm < 10) {
+    //         mm = "0" + mm;
+    //     }
+    //     document.getElementById("spanDate").innerHTML = dd + "-" + mm + "-" + yyyy
+    // }
+
+    // 4. Find the area
+function funcArea(){
+    let a = parseInt(document.getElementById("inFirst").value)
+    let b = parseInt(document.getElementById("inSecond").value)
+    let c = parseInt(document.getElementById("inThird").value)
+    let s = ((a+b+c)/2)
+    let area = Math.sqrt(s*((s-a)*(s-b)*(s-c)))
+    document.getElementById("spanArea").innerHTML = area.toFixed(2) + " m2"
+}
+</script>
+
+
+</html>

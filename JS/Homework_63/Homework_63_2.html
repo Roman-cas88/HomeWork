@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_62</title>
+    <!-- <link rel="stylesheet" href=".css"> -->
+
+</head>
+
+<body>
+    <div>
+        <button onclick="funcBtn()">Click Me!</button>
+    </div>
+
+    <div style="display: inline-block; margin: 20px; text-align: center;">
+        <h6>Text One</h6>
+        <h6>Text Two</h6>
+        <h6>Text Three</h6>
+    </div>
+</body>
+
+<script>
+    let count = 0;
+    let widths = [10, 20, 30, 40, 50, 40, 30, 20];
+
+    function funcBtn() {
+        let h = document.getElementsByTagName('h6');
+            for (n = 0; n < h.length; n++) {
+                h[n].style.color = 'red';
+                h[n].style.border = '2px solid black';
+                h[n].style.fontSize = widths[count%widths.length]+"px";
+            }
+            count++;
+        }
+</script>
+
+</html>

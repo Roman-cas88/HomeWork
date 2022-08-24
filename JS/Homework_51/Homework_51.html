@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_51</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a = 2;
+    b = 2;
+    x = "Hello";
+
+    if (a < b) {
+        console.log("Number a < b");
+    }
+    if (a == b) {
+        console.log("Number a = b");
+    } else {
+        console.log("Number a > b");
+    }
+    if ((a + b) == (a * b)) {
+        console.log("Yes: " + (a + b) + " = " + (a * b))
+    } else {
+        console.log("No: " + (a + b) + " != " + (a * b))
+    }
+
+    if (typeof x == "string") {
+        console.log(x + " - str")
+    } else {
+        console.log(x + " - num")
+    }
+    if (typeof (a && b && x) == "number") {
+        console.log(a + b + x)
+    } else {
+        console.log(a + b + x)
+    }
+    if (typeof x == "string") {
+        console.log("Number of leters: " + x.length + " in " + x)
+    } else {
+        console.log("x is not a string: x = " + x)
+    }
+    if (x.length == (a + b)) {
+        console.log("Yes")
+    } else {
+        console.log("No")
+    }
+
+    const days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+    const d = new Date();
+    let day = days[d.getDay()];
+
+    if (d.getDay == (0 || 6)) {
+        console.log("Сегодня " + day + " хороших выходных!")
+    } else {
+        console.log("Сегодня " + day + " продуктивных будней!")
+    }
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_53</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let x = new Date();
+    let y = f(x);
+
+    function f(x) {
+        let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        x = day[x.getDay(x)];
+        return x;
+    }
+    console.log("Today is " + y);
+    let b = timeF(x);
+    const time = ["morning", "day", "evening", "night"];
+
+    function timeF(x) {
+        x = x.getHours(x);
+        return x;
+    }
+    if ((b >= 5) && (b < 10)) {
+        console.log("Now " + time[0] + " time is: " + b + ":" + x.getMinutes(x))
+    }
+    if ((b >= 10) && (b < 18)) {
+        console.log("Now " + time[1] + " time is: " + b + ":" + x.getMinutes(x))
+    }
+    if ((b >= 18) && (b < 22)) {
+        console.log("Now " + time[2] + " time is: " + b + ":" + x.getMinutes(x))
+    }
+    if ((b >= 22) && (b < 5)) {
+        console.log("Now " + time[3] + " time is: " + b + ":" + x.getMinutes(x))
+    }
+</script>
+
+</html>

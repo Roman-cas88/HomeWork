@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_62_2</title>
+    <!-- <link rel="stylesheet" href=".css"> -->
+
+</head>
+
+<body>
+    <p id="p1">Hello There</p>
+    <button id="btn" onclick="myFunc()">Click</button>
+</body>
+
+<script>
+    let counter = 0;
+    let arr = ["Hello First", "Hello Second", "Hello Third"];
+    let colors = ['red', 'blue', 'green', 'pink', 'black'];
+
+    function myFunc() {
+        let btn = document.getElementById('p1');
+            btn.innerHTML = arr[counter%arr.length];
+            btn.style.color = colors[counter%colors.length];
+        counter++;
+}
+</script>
+
+</html>

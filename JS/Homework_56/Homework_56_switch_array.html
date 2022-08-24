@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_56</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+</body>
+
+<script>
+    funcArray()
+
+    function funcArray() {
+        let arr = ["fasf", "asda", "asfsa", "dbfdb"];
+
+        switch (true) {
+            case (arr.length < 5):
+                document.getElementById('p1').innerHTML = "A Tiny Array";
+                break;
+
+
+            case (arr.length >= 5) && (arr.length < 15):
+                document.getElementById('p1').innerHTML = "A Short Array";
+                break;
+
+            case (arr.length >= 15) && (arr.length < 30):
+                document.getElementById('p1').innerHTML = "An Average Array";
+                break;
+
+            case (arr.length >= 30) && (arr.length < 50):
+                document.getElementById('p1').innerHTML = "A Large Array";
+                break;
+
+            case (arr.length > 50):
+                document.getElementById('p1').innerHTML = "A Gigantic Array";
+                break;
+
+            default:
+                document.getElementById('p1').innerHTML = "This Is Not An Array";
+        }
+    };
+</script>
+
+</html>

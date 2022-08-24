@@ -1,0 +1,44 @@
+.buttonDropDown {
+    background-color: #313232;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonDropDown:hover,
+.buttonDropDown:focus {
+    background-color: #080808;
+}
+
+.divDropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.divDropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #a4a2a2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.divDropDownContent a {
+    color: rgb(3, 3, 126);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    cursor: alias;
+}
+
+.divDropDownContent a:hover {
+    background-color: rgb(143, 141, 141)
+}
+
+.show {
+    display: block;
+}
