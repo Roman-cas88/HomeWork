@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
 <body>
-
-    <h1 id="id1">My Heading 1</h1>
-    <h1>My Heading 1</h1>
-    <h1>My Heading 1</h1>
-
-    <button type="button" onclick="colorChange()">
-        Click Me!</button>
-
+<p>Name: <input type="text" id="name"></p>
+<p>Surname: <input type="text" id="surname"></p>
+<p>Old: <input type="number" id="old"></p>
+<button onclick="funcContact()">Result</button>
+<h2 id="hello"></h2>
 </body>
+<!--document.querySelector('#searchTxt').value; selected by id
+document.querySelector('.searchField').value; selected by class
+document.querySelector('input').value; selected by tagname
+document.querySelector('[name="searchTxt"]').value; selected by name  -->
 <script>
+let input = {
+    n: document.getElementById('name'),
+    sn: document.querySelector('#surname'),
+    o: document.querySelector('#old'),
+}
+let user = {
+name: ["Roman", "Anton"]
+}
+function funcContact() {
+}
+// document.getElementById('hello').innerHTML = "Hello " + input.sn.value + " " + input.n.value + "! Your are " + input.o.value + " years old."
 
-
-    let text1="";
-    function colorChange() {
-        const person = {
-            fname: "John",
-            lname: "Doe",
-            age: 25
-        };
-
-        for (let x in person) {
-            text1 += '<p style="color:red">'+ x + ": " + person[x] + '<br>' + '</p>';
-        }
-        document.getElementById('id1').innerHTML = text1;
-        console.log(text1);
-    }
 </script>
-
-</html>
-</script>
-
 </html>
