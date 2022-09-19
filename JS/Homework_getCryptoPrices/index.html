@@ -21,12 +21,12 @@
         let url = 'https://api2.binance.com/api/v3/ticker/24hr';
         let response = await fetch(url);
         let info = await response.json();
-        let price = info.find(a => a.symbol === pair).lastPrice
+        let price = info.find(a => a.symbol === pair).lastPrice;
         price = +price;
         console.log(price);
-        let output = document.getElementById('output')
+        let output = document.getElementById('output');
         output.innerHTML = "The price of " + pair + " : $" + price
-    }
+    };
 </script>
 
 </html>
