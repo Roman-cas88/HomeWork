@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat say something</title>
+
+    <style>
+        .input{
+            text-align: center;
+            float: left;
+        }
+        .img{
+            margin-left: 50px;
+            float: left;
+        }
+        #img{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input">
+        <input id="text" placeholder="input text for cat" type="text"><br><br>
+        <input id="size" placeholder="input size fot text" type="number"><br><br>
+        <input id="color" placeholder="what color of text do you want?" type="text"><br><br>
+        <button id="but" onclick="catFunc()">Try</button>
+    </div>
+    <div class="img">
+        <img id="img">
+    </div>
+</body>
+<script>
+    async function catFunc() {
+
+        let textInput = document.getElementById('text').value;
+        let sizeInput = document.getElementById('size').value;
+        let colorInput = document.getElementById('color').value;
+
+        let input = {
+            text: textInput,
+            size: sizeInput,
+            color: colorInput
+        };
+
+        let url = new URL(input.text, 'https://cataas.com/cat/says/')
+        url.searchParams.set('size', input.size);
+        url.searchParams.set('color', input.color);
+        url.searchParams.set('json', true);
+        console.log(url);
+
+        let cat = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify()
+        });
+
+        let result = await cat.json()
+        console.log(result)
+
+        let url2 = 'https://cataas.com/'
+        let url3 = url2 + result.url
+        console.log(url3)
+
+        document.getElementById('img').setAttribute('src', url3)
+    };
+</script>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW_75</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        main {
+            padding: 5px;
+            background-color: aquamarine;
+            height: 380px;
+            width: 600px;
+            margin: auto;
+
+        }
+
+        input,
+        button {
+            margin: auto;
+            margin-top: 20px;
+            display: block;
+        }
+
+        #email {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Login & Registration Form</h1>
+    <main>
+
+        <input id="id" placeholder="ID"> </input>
+        <input id="name" placeholder="Name"> </input>
+        <input id="country" placeholder="Country"> </input>
+        <input id="logo" placeholder="Logo"> </input>
+        <input id="slogan" placeholder="Slogan"> </input>
+        <input id="head_quaters" placeholder="Head Quaters"> </input>
+        <input id="website" placeholder="Website"> </input>
+        <input id="established" placeholder="Established"> </input>
+
+        <button onclick="register()">Register</button>
+    </main>
+    <script>
+        async function register() {
+
+                let idInput = document.getElementById('id').value;
+                let nameInput = document.getElementById('name').value;
+                let countryInput = document.getElementById('country').value;
+                let logoInput = document.getElementById('logo').value;
+                let sloganInput = document.getElementById('slogan').value;
+                let headQuatersInput = document.getElementById('head_quaters').value;
+                let websiteInput = document.getElementById('website').value;
+                let establishedInput = document.getElementById('established').value;
+
+                let airline = {
+                    id: idInput,
+                    name: nameInput,
+                    country: countryInput,
+                    logo: logoInput,
+                    slogan: sloganInput,
+                    head_quarters: headQuatersInput,
+                    website: websiteInput,
+                    established: establishedInput
+                };
+
+
+                let url = 'https://api.instantwebtools.net/v1/airlines'
+                let req = fetch(url, {
+                            method: 'POST',
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            }),
+                            body: JSON.stringify(airline)
+                        }).then (data => {
+                              if (!data.ok) {
+                                throw Error(data.status);
+                               }
+                               return data.json();
+                              })
+                              .then(update => {
+                              console.log(airline)});
+                        
+                            // fetch(url, {
+                            //     method: 'POST',
+                            //     headers: new Headers({
+                            //         'Content-Type': 'application/json'
+                            //     }),
+                            //     body: JSON.stringify(airline)
+                            // });
+                                   
+                            // let result = await response.json();
+                            // alert(response.status == 200 ? "Airline creat" : "Unsuccessful");
+                            // console.log(result);
+        }
+    </script>
+
+</body>
+
+</html>

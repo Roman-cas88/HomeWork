@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        main {
+
+            background-color: aquamarine;
+            height: 250px;
+            width: 600px;
+            margin: auto;
+
+        }
+
+        input,
+        button {
+            margin: auto;
+            margin-top: 20px;
+            display: block;
+        }
+
+        #email {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Login & Registration Form</h1>
+    <main>
+        <p>Email: </p>
+        <input id="email" type="email"> </input>
+        <p>Password: </p>
+        <input id="password" type="password"> </input>
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+    </main>
+    <script>
+        async function login() {
+
+            let emailInput = document.getElementById('email').value;
+            let passwordInput = document.getElementById('password').value;
+
+            let userlogin = {
+                "email": emailInput,
+                "password": passwordInput
+            };
+
+            let userloginJson = JSON.stringify(userlogin);
+            console.log(userloginJson);
+
+            let url = "https://reqres.in/api/login";
+            let response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: userloginJson
+            });
+            let result = await response.json();
+            alert(response.status == 200 ? "Login Successful" : "Login Unsuccessful");
+            console.log(result);
+
+        };
+        async function register() {
+
+            // let emailInput = document.getElementById('email').value;
+            // let passwordInput = document.getElementById('password').value;
+            // let user = {
+            //     email: emailInput,
+            //     password: passwordInput
+            // };
+            // let user = {
+            //         name: 'pai',
+            //         email: 'eve.holt@reqres.in',
+            //         password: 'pistol'
+            //     };
+
+            //     let url = 'https://reqres.in/api/register';
+            //     let response = await fetch(url, {
+            //         method: 'POST',
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify(user)
+            //     });
+            //     let result = await response.json();
+            // console.log(result)
+            // alert(response.status == 200 ? "Registration Successful" : "Registration Unsuccessful");
+
+
+
+            let emailInput = document.getElementById('email').value;
+            let passwordInput = document.getElementById('password').value;
+            let userRegistration = {
+                email: emailInput,
+                password: passwordInput
+            };
+            console.log(userRegistration)
+            let url = "https://reqres.in/api/register";
+            let response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userRegistration)
+            });
+            let result = await response.json();
+            alert(response.status == 200 ? "Registration Successful" : "Registration Unsuccessful");
+            console.log(result)
+        }
+    </script>
+
+</body>
+
+</html>
