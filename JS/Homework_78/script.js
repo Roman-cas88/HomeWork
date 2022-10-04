@@ -58,8 +58,8 @@
 
                 // View info whith download  
                 for (let i = 0; i < arr.length; i++) {
-                    document.getElementById('p').innerHTML += 'File name: ' + arr[i].name + ' <a href="'+arr[i].link+'" target="blank"> Download </a>' + '<br>' + "File key: " + arr[i]
-                        .key + '; Auto deleted at: ' + arr[i].expires.slice(0, 10) + '<br><br>';
+                    document.getElementById('p').innerHTML += `File name: ${arr[i].name} <a href="${arr[i].link}" target="blank"> Download </a><br> 
+                    File key: ${arr[i].key}; Auto deleted at: ${arr[i].expires.slice(0, 10)}<br><br>`;
                 }
             })
             .catch((error) => {
